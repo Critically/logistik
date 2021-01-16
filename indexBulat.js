@@ -150,7 +150,7 @@ async function findNearestAddress(arr, ordr) {
         //Если нет никакой сортировки то просто берем ближайший адрес
         if (arrCoords[i].order == ordr) {
             arr.push(arrCoords[i]);
-            proms.push(fetch(url + arrCoords[0].x + ',' + arrCoords[0].y + ';' + arrCoords[i].x + ',' + arrCoords[i].y));
+            proms.push(fetch(url + arrCoords[0].y + ',' + arrCoords[0].x + ';' + arrCoords[i].y + ',' + arrCoords[i].x))
         }
     }
 
